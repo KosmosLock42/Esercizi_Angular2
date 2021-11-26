@@ -1,0 +1,20 @@
+main{
+    background-color: cadetblue;
+    button{
+        border: none;
+        margin: 1rem;
+        height: 6vh;
+        width: 10vw;
+        font-weight: bolder;
+        letter-spacing: 0.2rem;
+        &:hover{
+            border: black solid 2px;
+        }
+    }
+    .usrbtn{
+        background-color: rgb(192, 69, 69);
+    }
+    .ordbtn{
+        background-color: rgb(136, 201, 226);
+    }
+}

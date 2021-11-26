@@ -1,0 +1,7 @@
+<main class="border border-secondary d-flex flex-column align-items-center">
+<h5>user-list</h5>
+<div class="iterator" *ngFor="let user of users">
+<app-user-single [user]="user" (clk)="clk.emit($event)"></app-user-single>
+
+</div>
+</main>

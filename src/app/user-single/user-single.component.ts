@@ -9,6 +9,7 @@ import { IUser } from 'src/models/ObjInterface';
 export class UserSingleComponent implements OnInit {
   @Input() user!: IUser;
   @Output() clk = new EventEmitter<IUser>();
+  @Output() dlt = new EventEmitter<IUser>();
 
   constructor() { }
 

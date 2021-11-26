@@ -73,4 +73,13 @@ tabClose(){
   this.singleUser = undefined;
 }
 
+deleteUser(user: IUser){
+  let list = this.users.indexOf(user);
+  this.users.splice(list, 1);
 }
+
+
+}
+
+
+

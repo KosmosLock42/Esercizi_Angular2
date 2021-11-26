@@ -10,7 +10,7 @@ import { IUser } from 'src/models/ObjInterface';
 export class UserListComponent implements OnInit {
   @Input() users!: IUser[];
   @Output() clk = new EventEmitter<IUser>();
-
+  @Output() dlt = new EventEmitter<IUser>();
   constructor() { }
 
   ngOnInit(): void {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-order-list',
   templateUrl: './order-list.component.html',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderListComponent implements OnInit {
 
-  constructor() { }
+ 
+
+  constructor( ) { }
 
   ngOnInit(): void {
+
+    
   }
 
 }

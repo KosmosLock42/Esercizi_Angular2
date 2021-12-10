@@ -8,5 +8,5 @@ export interface IBeer {
 
  export enum Size {
     small = "small",
-    medium ="medium"
+    medium = "medium"
 }

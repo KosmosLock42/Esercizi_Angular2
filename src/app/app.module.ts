@@ -15,6 +15,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LandingComponent } from './landing/landing.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BreweryComponent } from './brewery/brewery.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     OrderDetailComponent,
     NotFoundComponent,
     NavbarComponent,
-    LandingComponent
+    LandingComponent,
+    BreweryComponent
   ],
   imports: [
     BrowserModule,

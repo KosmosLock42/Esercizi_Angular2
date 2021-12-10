@@ -1,1 +1,18 @@
-<p>brewery works!</p>
+<main class="d-flex flex-column justify-content-start align-items-center">
+<h2>Birreria</h2>
+
+<form action="post" id="beerselect" class="d-flex justify-content-between">
+    <select name="" id="">
+        <option value="" *NgFor="let beer of beers"> {{ beer.name }}</option>
+    </select>
+
+    <select name="" id="">
+        <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+    </select>
+
+    <button>Search</button>
+</form>
+
+
+</main>

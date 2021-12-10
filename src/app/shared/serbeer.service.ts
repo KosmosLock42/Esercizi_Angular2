@@ -19,4 +19,8 @@ export class SerbeerService {
     return this.beers$.pipe(find(beer => beer.id === id))
   }
 
+  public beerSelector(name:string, type: string): Observable<IBeer | undefined> {
+    return this.beers$.pipe(find(beer => beer.name === name && beer.type === type))
+  }
+
 }

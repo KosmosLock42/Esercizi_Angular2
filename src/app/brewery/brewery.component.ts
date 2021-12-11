@@ -10,10 +10,21 @@ import { SerbeerService } from '../shared/serbeer.service';
 })
 export class BreweryComponent implements OnInit {
   beers$!: Observable<IBeer | undefined>;
+  chosenBname!: string;
+  chosenBsize!: string;
+  selectedB!: IBeer | undefined;
+
+  showBeer() {
+    this.beerServ
+      .beerSelector(this.chosenBname, this.chosenBsize)
+      .subscribe((data) => (this.selectedB = data));
+  }
 
   constructor(private beerServ: SerbeerService) {}
 
   beers: IBeer[] = this.beerServ.beers;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.beerServ.beers);
+  }
 }

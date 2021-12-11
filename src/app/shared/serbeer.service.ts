@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable, from } from 'rxjs';
 import { IBeer } from '../models/beerInter';
 import { beerList } from '../models/store';
-import { find } from 'rxjs/operators' ;
+import { filter, find } from 'rxjs/operators' ;
+
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +20,7 @@ export class SerbeerService {
     return this.beers$.pipe(find(beer => beer.id === id))
   }
 
-  public beerSelector(name:string, type: string): Observable<IBeer | undefined> {
+  public beerSelector(name:string, type:string): Observable<IBeer | undefined> {
     return this.beers$.pipe(find(beer => beer.name === name && beer.type === type))
   }
 

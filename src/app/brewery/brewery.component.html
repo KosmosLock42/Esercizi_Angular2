@@ -2,16 +2,26 @@
 <h2>Birreria</h2>
 
 <form action="post" id="beerselect" class="d-flex justify-content-between">
-    <select name="" id="">
-        <option value="" *NgFor="let beer of beers"> {{ beer.name }}</option>
+    <select [(ngModel)]="chosenBname" name="bName" id="">
+        <option *ngFor="let beer of beers"> {{ beer.name }}</option>
     </select>
 
-    <select name="" id="">
-        <option value="Small">Small</option>
-        <option value="Medium">Medium</option>
+    <select [(ngModel)]="chosenBsize" name="bSize" id="">
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
     </select>
 
-    <button>Search</button>
+    <button [disabled]="!chosenBname || !chosenBsize" (click)="showBeer()"  >Search</button>
+
+    
+
+    <ng-container *ngIf="selectedB">
+    <div class="card">
+        <div class="card-body">
+         <p>ciao {{selectedB.name}}</p>
+        </div>
+      </div>
+</ng-container>
 </form>
 
 

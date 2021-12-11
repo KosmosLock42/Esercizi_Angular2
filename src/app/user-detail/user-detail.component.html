@@ -1,0 +1,26 @@
+<main class="border border-secondary p-4" *ngIf="userDetail">
+  <h5>user-detail</h5>
+
+  <section >
+    <ul>
+      <li>ID: {{userDetail.id}}</li>
+      <li>Name: {{userDetail.name}} </li>
+      <li>Surname: {{userDetail.surname}} </li>
+      <li>Age: {{userDetail.age}} </li>
+      <li>Date of birth: {{userDetail.dateOfBirth | date: "dd MMM yyyy"}}  </li>
+      <li>Address:</li>
+      <li>City: {{userDetail.address.city}} </li>
+      <li>Street: {{userDetail.address.street}}</li>
+      <li>PostalCode: {{userDetail.address.postalCode}} </li>
+      <li>Role: {{userDetail.role}} </li>
+      <li>username: {{userDetail.username}} </li>
+      <li>Gender: {{userDetail.gender}}</li>
+      <li><img [src]="userDetail.profilePhotoUrl"> </li>
+    </ul>
+
+    <button (click)="close.emit()">Close</button>
+
+  </section>
+
+
+</main>

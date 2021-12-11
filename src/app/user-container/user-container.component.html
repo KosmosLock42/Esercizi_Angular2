@@ -1,0 +1,14 @@
+<main class="d-flex flex-column justify-content-center align-items-center">
+  <h5>user-container</h5>
+  <div class="vh-100 vw-100 p-5 d-flex justify-content-between">
+    <app-user-list
+      [users]="users"
+      (clk)="select($event)"
+      (dlt)="deleteUser($event)"
+    ></app-user-list>
+    <app-user-detail
+      [userDetail]="singleUser"
+      (close)="tabClose()"
+    ></app-user-detail>
+  </div>
+</main>

@@ -1,0 +1,36 @@
+<main class="d-flex flex-column justify-content-start align-items-center">
+<h2>Birreria</h2>
+
+<form action="post" id="beerselect" class="d-flex justify-content-between">
+    <select [(ngModel)]="chosenBname" name="bName" id="">
+        <option *ngFor="let beer of beers"> {{ beer.name }}</option>
+    </select>
+
+    <select [(ngModel)]="chosenBsize" name="bSize" id="">
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+    </select>
+
+    <button [disabled]="!chosenBname || !chosenBsize" (click)="showBeer()"  >Search</button>
+
+    </form>
+
+    
+    
+        <div *ngIf="selectedB; else nobeer" class="card mt-4">
+        <div class="card-body">
+         <p>{{selectedB.name}}</p>
+         <p>{{selectedB.price}} €</p>
+        </div>
+      </div>
+
+      <ng-template #nobeer>
+        <div class="card-body">
+            <p>Seleziona una birra valida.</p>
+           
+           </div>
+      </ng-template>
+
+
+
+</main>

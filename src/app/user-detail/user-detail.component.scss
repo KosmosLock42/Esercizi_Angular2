@@ -1,0 +1,21 @@
+main{
+    height: 75vh;
+    width: 40vw;
+    background-color: rgb(206, 196, 108);
+    img{
+        width: 12rem;
+        height: 12rem;
+    }
+    ul li{
+        list-style: none;
+    }
+    button{
+        background-color: rgb(175, 76, 76);
+        font-weight: bolder;
+        border-radius: 75%;
+        border: none;
+        height: 2rem;
+        width: 6rem;
+        color: rgb(175, 174, 174);
+    }
+}

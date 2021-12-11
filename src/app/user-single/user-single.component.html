@@ -1,0 +1,13 @@
+<main class="border border-secondary m-4 d-flex justify-content-evenly align-items-center p-1">
+
+      <img  [src]="user.profilePhotoUrl" alt="cats" />
+    
+      <strong>{{ user.name }}</strong>
+      <strong>{{ user.surname }}</strong>
+      <p>{{ user.age }}</p>
+      <p>{{ user.address.city }}</p>
+    
+      <button class="nfobtn" (click)="clk.emit(user)" >Dettagli</button>
+      <button class="dltbtn" (click)="dlt.emit(user)">X</button>
+
+</main>

@@ -15,16 +15,21 @@
 
     </form>
 
-    <ng-container *ngIf="selectedB">
     
-        <div class="card mt-4">
+    
+        <div *ngIf="selectedB; else nobeer" class="card mt-4">
         <div class="card-body">
          <p>{{selectedB.name}}</p>
          <p>{{selectedB.price}} €</p>
         </div>
       </div>
 
-</ng-container>
+      <ng-template #nobeer>
+        <div class="card-body">
+            <p>Seleziona una birra valida.</p>
+           
+           </div>
+      </ng-template>
 
 
 
